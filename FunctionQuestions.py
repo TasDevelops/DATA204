@@ -89,16 +89,14 @@ print("\nQ3a\n")
 
 
 
-user_input = int(input("Enter an integer: "))
-def prime_num(num: int) -> bool:"""This function takes an integer as an input, and returns true if the number is prime, false otherwise"""
-if num < 2:
-    return False # if statement to exclude integer 1 
-    for n in range(2, num): # loops through the range 2 to user input
-        if num % n == 0:
-            return False # returns false any number divisible by other number in specified range
-            return True # if none of the above conditions are met, then the input number is prime
-print(f"The integer {user_input}
-            returns:", prime_num(user_input))
+def isPrime(x):
+    if x > 1:
+        for i in range(2, x):
+            if x % i == 0:
+                return False
+                return True
+                return False
+print(isPrime(int(input("Enter a number: "))))
 
 
 
@@ -109,9 +107,19 @@ print("\nQ3b\n")
 
 # A3b:
 
-
-
-# -------------------------------------------------------------------------------------- #
+def isPrimee(x):
+    try: #try except method - good for error handling
+        x = int(x)
+        if x > 1:
+            for i in range(2, x):
+                if x % i == 0:
+                    return False
+                    return True
+                    return False
+    except ValueError:
+        print("Try again: ")
+        print(isPrimee(input("Enter a number: ")))
+print(isPrimee(input("Enter a number: ")))
 
 
 
