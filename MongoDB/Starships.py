@@ -60,4 +60,4 @@ db.create_collection("starships")  #creating starships collection
 for r in replace():
     db.starships.insert_one(r)
 
-print("All starships have been now added")
+print('All starships have been now added')
